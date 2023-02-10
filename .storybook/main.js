@@ -1,8 +1,5 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
-
-const config: StorybookConfig = {
+const config = {
   "stories": [
-    "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
@@ -11,14 +8,14 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions"
   ],
   "framework": {
-    "name": "@storybook/react-webpack5",
-    "options": {}
+    "name": "@storybook/react",
+  //   "options": {}
   },
-  "docs": {
-    "autodocs": "tag"
-  },
+  // "docs": {
+  //   "autodocs": "tag"
+  // },
   "features": {
     "storyStoreV7": false
   }
 };
-export default config;
+module.exports = config
